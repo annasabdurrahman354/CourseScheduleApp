@@ -32,7 +32,7 @@ class DailyReminder : BroadcastReceiver() {
     }
 
     fun setDailyReminder(context: Context) {
-        val time = "14:15"
+        val time = "06:00"
         if (isDateInvalid(time, "HH:mm")) return
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, DailyReminder::class.java)

@@ -23,7 +23,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         nightModePref?.onPreferenceChangeListener =
             Preference.OnPreferenceChangeListener { _, newValue ->
                 val mode = NightMode.valueOf(newValue.toString().toUpperCase(Locale.US))
-                AppCompatDelegate.setDefaultNightMode(mode.value)
+                updateTheme(mode.value)
                 true
             }
 

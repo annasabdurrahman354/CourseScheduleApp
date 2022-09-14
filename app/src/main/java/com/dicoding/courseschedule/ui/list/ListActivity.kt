@@ -79,6 +79,8 @@ class ListActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    // showSortMenu should be called  when action_sort menu clicked
+    // on function onSwiped callback should call viewmodel.delete(course)
     private fun showSortMenu() {
         val view = findViewById<View>(R.id.action_sort) ?: return
         PopupMenu(this, view).run {
